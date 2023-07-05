@@ -14,10 +14,10 @@
           buildInputs = [ pkgs.zola ];
         } ''
           mkdir -p $out
-          cp -r ${self} .
+          cp -r ${self}/* .
           chmod -R u+w .
           zola build
-          cp -r public $out
+          cp -r public/* $out
         '';
         devShells.default = pkgs.mkShell {
           packages = [
