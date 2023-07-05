@@ -25,14 +25,13 @@ weight = 20
 
 [[extra.list]]
 title = "Easy to use"
-content = 'cLan allows you create your own private network with services through a user interface'
+content = 'cLan provides a user-friendly interface that allows you to establish your own private network, complete with services.'
 
 [[extra.list]]
 title = "Open-source"
-content = 'All code for cLan is free and open available.'
+content = 'All code for cLan is freely available and open-source.'
 
 [[extra.list]]
-title = "Yet another point"
-content = 'Write some description why.'
-
+title = "Decentralized"
+content = "The design of cLan enables the distribution of your applications/services across several machines. This increases the resilience of the network, ensuring continued operation even if some computers become unavailable."
 +++
