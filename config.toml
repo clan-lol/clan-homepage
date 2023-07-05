@@ -67,7 +67,7 @@ timezone = "America/New_York"
 
 # Edit page on reposity or not
 edit_page = false
-docs_repo = "https://git.clan.lol/Mic92/adidoks"
+docs_repo = "https://git.clan.lol/clan/clan-docs"
 repo_branch = "main"
 
 ## Math settings
@@ -80,7 +80,7 @@ library = "katex"  # options: "katex", "mathjax". default is "katex".
 [extra.open]
 enable = true
 # this image will be used as fallback if a page has no image of its own
-image = "doks.png"
+image = "logo.png"
 og_locale = "en_US"
 twitter_site = ""
 twitter_creator = ""
@@ -90,10 +90,10 @@ facebook_publisher = ""
 ## JSON-LD
 [extra.schema]
 type = "Organization"
-logo = "logo-doks.png"
+logo = "logo.png"
 twitter = ""
 linked_in = ""
-github = "https://github.com/aaranxu"
+github = "https://git.clan.lol"
 section = "blog" # see config.extra.main~url
 ## Sitelinks Search Box
 site_links_search_box = false

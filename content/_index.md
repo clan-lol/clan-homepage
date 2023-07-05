@@ -1,10 +1,9 @@
 +++
-title = "Build your own cLan"
-
+title = "Build your own"
 
 # The homepage contents
 [extra]
-lead = '<b>cLan</b> envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly.'
+lead = '<img src="/logo.png" width="100px" height="100px" alt="cLan logo"></img> <br><b>cLan</b> envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly. '
 url = "/docs/getting-started/introduction/"
 url_button = "Learn more"
 repo_version = "Clan v0.0.0-alpha"
@@ -25,12 +24,12 @@ url = "/blog/"
 weight = 20
 
 [[extra.list]]
-title = "Security aware"
-content = 'Write some description why.'
+title = "Easy to use"
+content = 'cLan allows you create your own private network with services through a user interface'
 
 [[extra.list]]
-title = "Easy to use"
-content = 'Write some description why.'
+title = "Open-source"
+content = 'All code for cLan is free and open available.'
 
 [[extra.list]]
 title = "Yet another point"
