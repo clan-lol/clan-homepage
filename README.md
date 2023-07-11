@@ -14,3 +14,7 @@ $ zola build
 ```
 $ zola serve
 ```
+
+## Contributing
+
+Send changes to https://git.clan.lol/clan/clan-homepage
