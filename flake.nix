@@ -17,7 +17,7 @@
           cp -r ${self}/* .
           chmod -R u+w .
           zola build
-          cp -r public/* $out
+          cp -r public/* public/.* $out
         '';
         devShells.default = pkgs.mkShell {
           packages = [
