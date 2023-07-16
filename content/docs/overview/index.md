@@ -15,15 +15,15 @@ top = false
 +++
 
 
-# Hi Boss
+# cLan
 
-"Hi, Boss" envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that's private, secure, and user-friendly. The system transcends the conventional reliance on centralized services, allowing for direct, end-to-end encrypted communication among users. Rooted in open-source software, "Hi, Boss" ensures no vendor lock-in, and introduces robust features including remote management, backup functionality, user-friendly app store, and fleet management for small businesses.
+cLan envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that's private, secure, and user-friendly. The system transcends the conventional reliance on centralized services, allowing for direct, end-to-end encrypted communication among users. Rooted in open-source software, cLan ensures no vendor lock-in, and introduces robust features including remote management, backup functionality, user-friendly app store, and fleet management for small businesses.
 
 ## Architecture Overview
 
 ### Decentralized Network Model
 
-"Hi, Boss" incorporates a decentralized network model to tackle the challenges posed by restrictive firewalls, NAT, and the scarcity of ipv4 address space. By leveraging end-to-end encryption, the model ensures all peers within the network are fully connected, allowing services and communication to occur directly.
+cLan incorporates a decentralized network model to tackle the challenges posed by restrictive firewalls, NAT, and the scarcity of ipv4 address space. By leveraging end-to-end encryption, the model ensures all peers within the network are fully connected, allowing services and communication to occur directly.
 This is achieved by the user of an decentralized virtual private network (VPN). A decentralized VPN is a system that uses multiple servers spread across different locations to create a secure, private network within an organization, enabling secure communication and data transfer without relying on a central server. The VPN serves as an added layer of security, shielding internal services from exposure to the open internet.
 
 This network model uses a decentralized method, similar to a phonebook, that translates website names into addresses that computers understand (i.e. using mDNS), which helps improve how users interact with the network. Looking forward, for businesses, the model plans to include rules that decide who can access which parts of the network, depending on their job role.
@@ -47,7 +47,7 @@ We will not add this to the initial prototype...
 
 ### NixOS as the Operating System
 
-* Motivation: Maintaining and configuring a decentralized system like "Hi, Boss" with heterogeneous services on heterogeneous platforms is a challenging task. In professional setups this is usually solved by the use of configuration management. These systems require years of experience and are therefore not approchable by normal users. The solution so far to this problem is to provide instead appliances that are massivly locked in functionality or platforms they support.
+* Motivation: Maintaining and configuring a decentralized system like cLan with heterogeneous services on heterogeneous platforms is a challenging task. In professional setups this is usually solved by the use of configuration management. These systems require years of experience and are therefore not approchable by normal users. The solution so far to this problem is to provide instead appliances that are massivly locked in functionality or platforms they support.
 * To overcome these limitations, we propose NixOS.
 * NixOS is an operating system that uses a single declarative and consistent configuration to describe the whole system using its own programming language called Nix
 * While Nix is not necessarily more user-friendly, we believe it's still the best fit to be configured through graphical user interface for the following reasons: The underlying data structures is simple enough to be generated from a user interface / assistant. Because it's declarative unlike other many configuration management systems, different modules can be composed and applied in any order.
@@ -68,9 +68,9 @@ From the perspective of the user, software and systems that once required years 
 
 ### Self-hosted backup and restore
 
-"Hi, Boss" enables users to easily self-host and backup their data, since one of the perils of self-hosting is data loss. Users can build pre-configured servers from the interface where they also would be notified about devices not being backed up and view information about the storage device, such as available storage and state of arrays.
+cLan enables users to easily self-host and backup their data, since one of the perils of self-hosting is data loss. Users can build pre-configured servers from the interface where they also would be notified about devices not being backed up and view information about the storage device, such as available storage and state of arrays.
 
-It is possible for users to back up devices in their global network, regardless of how they are connected. Services installed provided by "Hi, Boss" also need to be aware of the backup process i.e. some applications, such as databases, have custom backup and restore procedures that needs to be integrated in the backup procedure.
+It is possible for users to back up devices in their global network, regardless of how they are connected. Services installed provided by cLan also need to be aware of the backup process i.e. some applications, such as databases, have custom backup and restore procedures that needs to be integrated in the backup procedure.
 
 
 
@@ -82,7 +82,7 @@ It is possible for users to back up devices in their global network, regardless 
 
 ### Base-OS
 
-Initially, we will utilize NixOS as the foundational operating system for hosting network-specific virtual machines. Presently, the installation process of NixOS involves advanced  technical knowledge, including a degree of proficiency in its unique programming language. However, our solution "Hi, Boss" aims to simplify this process, enabling even non-technical individuals to successfully install the system.
+Initially, we will utilize NixOS as the foundational operating system for hosting network-specific virtual machines. Presently, the installation process of NixOS involves advanced  technical knowledge, including a degree of proficiency in its unique programming language. However, our solution cLan aims to simplify this process, enabling even non-technical individuals to successfully install the system.
 
 Several approaches can be considered to simplify the Base OS installation process:
 
@@ -111,16 +111,16 @@ an example flake.nix for a virtual machine network:
 
 ```nix
 {
-  inputs.hiboss.url = "git+https://git.hiboss.com/hiboss";
+  inputs.cLan.url = "git+https://git.cLan.com/cLan";
 
-  outputs = { self, hiboss, ... }:
+  outputs = { self, cLan, ... }:
     {
       nixosModules = {
-        default = inputs.hiboss.nixosSystem {
+        default = inputs.cLan.nixosSystem {
           imports = [
-            hiboss.nixosModules.default
+            cLan.nixosModules.default
           ];
-          hiboss = {
+          cLan = {
             adminMode = "local";
             networkLayer= "yggdrasil";
             applications = {
@@ -128,7 +128,7 @@ an example flake.nix for a virtual machine network:
                 enable = true;
                 sharedFolders = [ "/shared/docs" ];
               };
-              mumbleClient.server = "mumble.hiboss";
+              mumbleClient.server = "mumble.cLan";
             };
           };
         };
@@ -162,11 +162,11 @@ the upper flake.nix can also be split into a boilerplate flake.nix and a json, w
 
 ```nix
 {
-  inputs.hiboss.url = "git+https://git.hiboss.com/hiboss";
+  inputs.cLan.url = "git+https://git.cLan.com/cLan";
   
-  outputs = { self, hiboss, ... }:
+  outputs = { self, cLan, ... }:
     {
-      nixosModules = hiboss.lib.generateNixosModules (builtins.fromJSON (import ./configs.json));
+      nixosModules = cLan.lib.generateNixosModules (builtins.fromJSON (import ./configs.json));
     };
 }
 ```
@@ -185,7 +185,7 @@ configs.json
         "sharedFolders": [ "/shared/docs" ]
       },
       "mumbleClient": {
-        "server": "mumble.hiboss"
+        "server": "mumble.cLan"
       }
     }
   }
