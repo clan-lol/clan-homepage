@@ -1,9 +1,23 @@
++++
+title = "Overview"
+description = "Overview of cLan's architecture, components and security"
+date = 2021-05-01T18:10:00+00:00
+updated = 2021-07-13T18:10:00+00:00
+draft = false
+weight = 410
+sort_by = "weight"
+template = "docs/page.html"
+
+[extra]
+lead = "Overview of cLan's architecture, components and security"
+toc = true
+top = false
++++
+
+
 # Hi Boss
 
 "Hi, Boss" envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that's private, secure, and user-friendly. The system transcends the conventional reliance on centralized services, allowing for direct, end-to-end encrypted communication among users. Rooted in open-source software, "Hi, Boss" ensures no vendor lock-in, and introduces robust features including remote management, backup functionality, user-friendly app store, and fleet management for small businesses.
-
-
-## Introduction
 
 ## Architecture Overview
 
@@ -63,7 +77,7 @@ It is possible for users to back up devices in their global network, regardless 
 ## Components
 
 <!-- source: https://cgit.lassul.us/project-x-docs/ -->
-![Design](./design-overview.drawio.png)
+<img width="100%" src="design-overview.drawio.png" alt="Design">
 (figure 1)
 
 ### Base-OS
@@ -179,7 +193,7 @@ configs.json
 ```
 
 A crude example of how this interface would look like
-![VM Manager New Network](./flake_controller_new.png)
+<img width="100%" src="flake_controller_new.png" alt="VM Manager New Network">
  
 
 ### VM Manager
@@ -190,13 +204,13 @@ Virtual machines are tight to a specific VPN of a particular group, and their co
 
 If a user intends to join only a single network and their hardware capabilities are limited, an alternative to consider would be to forego the use of a virtual machine. Instead, the network configuration could be integrated directly into the Base-OS to optimize performance and enhance the user experience.
 
-![proxmox](./proxmox.png)
+<img width="100%" src="proxmox.png" alt="Proxmox">
 
 The interface to the VM-manager for network admins is very similiar to the proxmox interface used for managing multiple VM nodes. Showing a list of networks and corresponding VMs on the left with a detail view and monitoring/log stats in the middle. Information and Interaction with the target system is provided by the Controller described in the next section.
 
 ### Virtual machine controller
 
-![Controller](./vm-controller.drawio.png)
+<img width="100%" src="vm-controller.drawio.png" alt="Controller">
 (figure 2)
 
 The Virtual Machine (VM) Manager operates on the Base OS, while the VM Controller functions within the virtual machine itself. The latter's role is to regulate the operating system within the VM, and can be managed by either the network administrator or the local user in control of the Base OS. Here are the different modes of control:
