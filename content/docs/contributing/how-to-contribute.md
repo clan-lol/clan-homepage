@@ -14,8 +14,6 @@ toc = true
 top = false
 +++
 
-👉 Make sure to read the [Code of Conduct](../code-of-conduct/).
-
 ## Contribute to Doks
 
 👉 The Clan code lives in the [`clan` repository](https://git.clan.lol/clan/clan)
