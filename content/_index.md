@@ -14,7 +14,7 @@ repo_url = "https://git.clan.lol/clan/"
 [[extra.menu.main]]
 name = "Docs"
 section = "docs"
-url = "/docs/getting-started/introduction/"
+url = "/docs/overview"
 weight = 10
 
 [[extra.menu.main]]
