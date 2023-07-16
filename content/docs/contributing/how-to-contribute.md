@@ -14,15 +14,13 @@ toc = true
 top = false
 +++
 
-## Contribute to Doks
+## Contribute
 
-👉 The Clan code lives in the [`clan` repository](https://git.clan.lol/clan/clan)
+👉 Explore our repos at [git.clan.lol](https://git.clan.lol/explore/repos)
 
-### Create an issue
+👉 [Create issues here](https://git.clan.lol/issues)
 
-- <TODO>
 
-## Improve documentation
+## Improve these docs
 
-👉 The documentation lives in [`./docs/`](https://git.clan.lol/clan/clan/docs)
-of the [`clan` repository](https://git.clan.lol/clan/clan/docs).
+👉 The documentation lives in [git.clan.lol/clan/clan-homepage](https://git.clan.lol/clan/clan-homepage/src/branch/main/content/docs)
