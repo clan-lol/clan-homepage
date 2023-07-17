@@ -1,6 +1,6 @@
 +++
 title = "How to Contribute"
-description = "Contribute to Clan, improve documentation, or submit to showcase."
+description = "Contribute to cLAN, improve documentation, or submit to showcase."
 date = 2021-05-01T18:10:00+00:00
 updated = 2021-05-01T18:10:00+00:00
 draft = false
@@ -9,22 +9,18 @@ sort_by = "weight"
 template = "docs/page.html"
 
 [extra]
-lead = "Contribute to Clan, improve documentation, or submit to showcase."
+lead = "Contribute to cLAN, improve documentation, or submit to showcase."
 toc = true
 top = false
 +++
 
-👉 Make sure to read the [Code of Conduct](../code-of-conduct/).
+## Contribute
 
-## Contribute to Doks
+👉 Explore our repos at [git.clan.lol](https://git.clan.lol/explore/repos)
 
-👉 The Clan code lives in the [`clan` repository](https://git.clan.lol/clan/clan)
+👉 [Create issues here](https://git.clan.lol/issues)
 
-### Create an issue
 
-- <TODO>
+## Improve these docs
 
-## Improve documentation
-
-👉 The documentation lives in [`./docs/`](https://git.clan.lol/clan/clan/docs)
-of the [`clan` repository](https://git.clan.lol/clan/clan/docs).
+👉 The documentation lives in [git.clan.lol/clan/clan-homepage](https://git.clan.lol/clan/clan-homepage/src/branch/main/content/docs)
