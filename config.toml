@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "https://clan.lol"
-title = "Clan"
+title = "cLAN"
 
 # The site theme to use.
 theme = "adidoks"
@@ -44,7 +44,7 @@ highlight_code = true
 
 [extra]
 # Put all your custom variables here
-author = "Clan contributors"
+author = "cLAN contributors"
 email = "admin@clan.lol"
 
 # If running on netlify.app site, set to true
@@ -58,7 +58,7 @@ theme_color = "#fff"
 
 # More about site's title
 title_separator = "-"  # set as |, -, _, etc
-title_addition = "Build your own cLan"
+title_addition = "Build your own cLAN"
 
 
 # Set date format in blog publish metadata
