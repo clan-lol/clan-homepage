@@ -1,0 +1,11 @@
+name: deploy
+on:
+  push:
+    branches:
+      - main
+jobs:
+  test:
+    runs-on: nix
+    steps:
+      - uses: actions/checkout@v3
+      - run: nix run .#deploy
