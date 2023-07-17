@@ -9,6 +9,9 @@
   outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } ({ lib, ... }: {
       systems = lib.systems.flakeExposed;
+      imports = [
+        ./flake-parts/deploy.nix
+      ];
       perSystem = { pkgs, ... }: {
         packages.default = pkgs.runCommand "website" {
           buildInputs = [ pkgs.zola ];
