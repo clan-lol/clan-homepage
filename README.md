@@ -18,3 +18,10 @@ $ zola serve
 ## Contributing
 
 Send changes to https://git.clan.lol/clan/clan-homepage
+
+
+## To update the website
+
+```
+$ nix run .#deploy
+```
