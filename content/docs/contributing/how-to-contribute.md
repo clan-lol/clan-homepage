@@ -18,7 +18,9 @@ top = false
 
 👉 Explore our repos at [git.clan.lol](https://git.clan.lol/explore/repos)
 
-👉 [Create issues here](https://git.clan.lol/issues)
+👉 [Browse issues](https://git.clan.lol/issues)
+
+👉 [Create new issue](https://git.clan.lol/clan/clan-core/issues/new)
 
 
 ## Improve these docs
