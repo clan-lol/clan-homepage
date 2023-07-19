@@ -7,12 +7,15 @@
   }: let
     deployScript = pkgs.writeScript "deploy.sh" ''
       export PATH="${lib.makeBinPath [
+        pkgs.coreutils
         pkgs.openssh
         pkgs.rsync
       ]}"
 
       if [ -n "$SSH_HOMEPAGE_KEY" ]; then
-        sshExtraArgs="-i $SSH_HOMEPAGE_KEY"
+        echo "$SSH_HOMEPAGE_KEY" > ./ssh_key
+        chmod 600 ./ssh_key
+        sshExtraArgs="-i ./ssh_key"
       else
         sshExtraArgs=
       fi
@@ -21,6 +24,8 @@
         -e "ssh -o StrictHostKeyChecking=no $sshExtraArgs" \
         -a ${self'.packages.default}/ \
         www@clan.lol:/var/www
+
+      rm ./ssh_key
     '';
   in {
     apps.deploy.program = "${deployScript}";
