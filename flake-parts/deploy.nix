@@ -25,7 +25,9 @@
         -a ${self'.packages.default}/ \
         www@clan.lol:/var/www
 
-      rm ./ssh_key
+      if [ -e ./ssh_key ]; then
+        rm ./ssh_key
+      fi
     '';
   in {
     apps.deploy.program = "${deployScript}";
