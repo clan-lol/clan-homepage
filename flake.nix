@@ -12,7 +12,7 @@
 
   outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } ({ lib, ... }: {
-      systems = lib.systems.flakeExposed;
+      systems = [ "x86_64-linux" ];
       imports = [
         ./flake-parts/deploy.nix
         ./flake-parts/devShells
