@@ -3,8 +3,8 @@ title = "Build your own"
 
 # The homepage contents
 [extra]
-lead = '<img src="/logo.png" width="100px" height="100px" alt="cLAN logo"></img> <br><b>cLAN</b> envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly. '
-url = "/docs/getting-started/introduction/"
+lead = '<img src="/logo/clan-dark.png" class="clogo" width="100px" height="100px" alt="cLAN logo"></img> <br><b>cLAN</b> envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly. '
+url = "/docs/thevision/"
 url_button = "Learn more"
 repo_version = "cLAN v0.0.0-alpha"
 repo_license = "Open-source MIT License."
@@ -14,7 +14,7 @@ repo_url = "https://git.clan.lol/clan/"
 [[extra.menu.main]]
 name = "Docs"
 section = "docs"
-url = "/docs/overview"
+url = "/docs/thevision"
 weight = 10
 
 [[extra.menu.main]]
@@ -22,6 +22,8 @@ name = "Blog"
 section = "blog"
 url = "/blog/"
 weight = 20
+
+
 
 [[extra.list]]
 title = "Easy to use"

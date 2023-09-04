@@ -127,6 +127,6 @@ url = "/privacy-policy/"
 weight = 10
 
 [[extra.footer.nav]]
-name = "Overview"
-url = "/docs/overview"
+name = "The Vision"
+url = "/docs/thevision"
 weight = 20

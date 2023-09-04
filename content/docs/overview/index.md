@@ -1,5 +1,5 @@
 +++
-title = "Overview"
+title = "Technial Overview"
 description = "Overview of cLAN's architecture, components and security"
 date = 2021-05-01T18:10:00+00:00
 updated = 2021-07-13T18:10:00+00:00
@@ -15,11 +15,10 @@ top = false
 +++
 
 
-# cLAN
+### cLAN
 
 cLAN envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that's private, secure, and user-friendly. The system transcends the conventional reliance on centralized services, allowing for direct, end-to-end encrypted communication among users. Rooted in open-source software, cLAN ensures no vendor lock-in, and introduces robust features including remote management, backup functionality, user-friendly app store, and fleet management for small businesses.
 
-## Architecture Overview
 
 ### Decentralized Network Model
 
@@ -151,8 +150,8 @@ This modules would be build by the VM controller into a system with the followin
         inputs.myNetworkFlake.nixosModules.default
         ./local-overrides.nix
       ];
-    }
-  }
+    };
+  };
 }
 ```
 
@@ -192,9 +191,9 @@ configs.json
 }
 ```
 
-A crude example of how this interface would look like
-<img width="100%" src="flake_controller_new.png" alt="VM Manager New Network">
- 
+<!-- A crude example of how this interface would look like
+ <img width="100%" src="flake_controller_new.png" alt="VM Manager New Network">
+--> 
 
 ### VM Manager
 
@@ -259,7 +258,6 @@ Our safeguards will include virtual machine isolation to mitigate the damage an 
 To address this, we only offer a limited set of options in our high-level modules, which either restrict or issue warnings for configurations deemed to be unsafe.
 For instance, services are exposed exclusively to the internal network and not to the wider internet, thereby offering an extra layer of security.
 
-TODO: Threats that are out-of-scope
 
 ### Trusted compute base
 
