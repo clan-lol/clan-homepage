@@ -15,6 +15,7 @@
       systems = [ "x86_64-linux" ];
       imports = [
         ./flake-parts/deploy.nix
+        ./flake-parts/new-post.nix
         ./flake-parts/devShells
       ];
       perSystem = { pkgs, ... }: {

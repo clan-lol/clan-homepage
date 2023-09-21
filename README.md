@@ -19,9 +19,15 @@ $ zola serve
 
 Send changes to https://git.clan.lol/clan/clan-homepage
 
-
 ## To update the website
 
 ```
 $ nix run .#deploy
+```
+
+
+## Create a new post
+
+```
+$ nix run .#new-post "September Changelog"
 ```
