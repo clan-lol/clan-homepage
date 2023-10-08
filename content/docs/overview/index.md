@@ -1,5 +1,5 @@
 +++
-title = "Technial Overview"
+title = "Technical Overview"
 description = "Overview of cLAN's architecture, components and security"
 date = 2021-05-01T18:10:00+00:00
 updated = 2021-07-13T18:10:00+00:00
