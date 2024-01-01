@@ -10,16 +10,15 @@
         "nixpkgs": [
           "nixpkgs"
         ],
-        "nixpkgs-for-deal": "nixpkgs-for-deal",
         "sops-nix": "sops-nix",
         "treefmt-nix": "treefmt-nix"
       },
       "locked": {
-        "lastModified": 1703170463,
-        "narHash": "sha256-kSANefJBHqlkM3bA+uehELYObFeFk1IRj1r6yrYLkjM=",
+        "lastModified": 1704028576,
+        "narHash": "sha256-1dQpLqhEZL5ThN4O4GAm9neXtO71+ztn/nRD5BR+QNg=",
         "ref": "refs/heads/main",
-        "rev": "d73b04bdfad31c73ae7414f65bd7b5e4ba75e42e",
-        "revCount": 1625,
+        "rev": "9649e43da59865e905df05132f9aa4742024290d",
+        "revCount": 1648,
         "type": "git",
         "url": "https://git.clan.lol/clan/clan-core"
       },
@@ -106,32 +105,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1703255338,
-        "narHash": "sha256-Z6wfYJQKmDN9xciTwU3cOiOk+NElxdZwy/FiHctCzjU=",
+        "lastModified": 1703637592,
+        "narHash": "sha256-8MXjxU0RfFfzl57Zy3OfXCITS0qWDNLzlBAdwxGZwfY=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "6df37dc6a77654682fe9f071c62b4242b5342e04",
+        "rev": "cfc3698c31b1fb9cdcf10f36c9643460264d0ca8",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-for-deal": {
-      "locked": {
-        "lastModified": 1700490099,
-        "narHash": "sha256-IDZGtMvddtEdYr7BUtXsQNPhVXcLzWj6AC9s1wRkZlo=",
-        "owner": "Luis-Hebendanz",
-        "repo": "nixpkgs",
-        "rev": "32ea44ece77a5bad662685acf4652cc984e2df3f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "Luis-Hebendanz",
-        "ref": "fix_python_deal",
         "repo": "nixpkgs",
         "type": "github"
       }
