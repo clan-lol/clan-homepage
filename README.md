@@ -5,15 +5,22 @@ We use [zola](https://www.getzola.org/) for building a static website.
 
 ## Build the homepage
 
-```
-$ zola build
+This will build the website including pages defined in the clan-core repo under `/docs`:
+
+```command
+$ nix build
 ```
 
 ## Start a local webserver
 
+This server will include all the pages from clan-core, but doesn't automatically refresh. Also make sure to wipe your browsers cache after each change.
+
+```command
+$ nix run .#serve
 ```
-$ zola serve
-```
+
+## zola build & serve
+Alternatively `zola build` and `zola serve` can be used for development but the result will be missing the pages defined in the clan-core repo.
 
 ## Contributing
 
