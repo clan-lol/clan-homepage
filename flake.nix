@@ -10,24 +10,17 @@
     clan-core.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, flake-parts, ... }:
+  outputs = inputs@{ self, flake-parts, clan-core, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } ({ lib, ... }: {
       systems = [ "x86_64-linux" ];
       imports = [
         ./flake-parts/deploy.nix
-        ./flake-parts/new-post.nix
         ./flake-parts/devShells
+        ./flake-parts/new-post.nix
+        ./flake-parts/website.nix
       ];
-      perSystem = { pkgs, ... }: {
-        packages.default = pkgs.runCommand "website" {
-          buildInputs = [ pkgs.zola ];
-        } ''
-          mkdir -p $out
-          cp -r ${self}/* .
-          chmod -R u+w .
-          zola build
-          cp -r public/* public/.* $out
-        '';
+      perSystem = {pkgs, ...}: {
+        formatter = pkgs.writeShellScriptBin "true" "true";
       };
     });
 }
