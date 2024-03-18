@@ -2,6 +2,8 @@
 
 {% extends "page.html" %}
 
+
+
 {% block seo %}
   {# This value is matched by the config.extra.menu.main->section #}
   {% set_global current_section = 'blog' %}
@@ -9,6 +11,8 @@
 {% endblock seo %}
 
 {% block body %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path='asciinema-player/asciinema-player.css') }}" />
+
   {% set page_class = "blog single" %}
 {% endblock body %}
 

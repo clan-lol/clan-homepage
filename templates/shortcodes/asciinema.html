@@ -1,0 +1,12 @@
+<div id="{{name}}" {% if class %}class="{{ class }}"{% endif %}>
+    <script src="{{ get_url(path='asciinema-player/asciinema-player.min.js') }}"></script>
+    <script>
+        AsciinemaPlayer.create('{{ get_url(path="videos/" ~ name) }}', 
+        document.getElementById("{{name}}"), {
+            loop: true,
+            autoPlay: true,
+        });
+    </script>
+</div>
+
+
