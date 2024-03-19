@@ -7,18 +7,14 @@ draft = false
 template = "blog/page.html"
 
 [taxonomies]
-authors = ["Mic92"]
+authors = ["W", "Qubasa"]
 
 [extra]
-lead = "In a digital age where privacy and control over one's digital footprint are increasingly scarce"
+lead = "By revolutionizing OS creation and management,"
 +++
 
 
-
-
-Clan emerges as a beacon of hope. More than just a project, it represents a revolutionary approach to reclaiming the internet and computing from the ground up. 
-
-By revolutionizing OS creation and management, Clan enables users to build any system from a git repository, automate secret handling, and join devices in a secure darknet for unmatched integration. This seamless control extends from applications to the OS kernel itself, redefining what it means to manage your digital environment effortlessly.
+Clan enables users to build any system from a git repository, automate secret handling, and join devices in a secure darknet for unmatched integration. This seamless control extends from applications to the OS kernel itself, redefining what it means to manage your digital environment effortlessly.
 
 ## How Clan Changes the Game
 
