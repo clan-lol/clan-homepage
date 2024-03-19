@@ -78,3 +78,36 @@ function handleColorSchemeChange(e) {
     setColorTheme("light");
   }
 }
+
+// Function to resize all video elements to match their parent article's width
+function resizeVideosToMatchArticleWidth() {
+  // Function to adjust video sizes
+  function adjustVideoSizes() {
+    // Find all video elements
+    const videos = document.querySelectorAll('video');
+
+    videos.forEach(video => {
+      // Find the closest parent article element
+      const article = video.closest('article');
+      if (!article) return; // Skip if no parent article found
+
+      // Calculate new video height to maintain aspect ratio
+      const aspectRatio = video.videoHeight / video.videoWidth;
+      const newWidth = article.clientWidth; // Width of the parent article
+      const newHeight = newWidth * aspectRatio;
+
+      // Set new width and height on the video
+      video.style.width = `${newWidth}px`;
+      video.style.height = `${newHeight}px`;
+    });
+  }
+
+  // Adjust video sizes on load
+  document.addEventListener('DOMContentLoaded', adjustVideoSizes);
+
+  // Adjust video sizes on window resize
+  window.onresize = adjustVideoSizes;
+}
+
+// Call the function to initialize the resizing
+resizeVideosToMatchArticleWidth();

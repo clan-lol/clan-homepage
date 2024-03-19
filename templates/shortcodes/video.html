@@ -1,5 +1,5 @@
 <div {% if class %}class="{{ class }}"{% endif %}>
-    <video width="612" height="444" loop autoplay>
+    <video loop autoplay id="{{name}}">
         <source src={{ get_url(path="videos/" ~ name) }} type="video/webm">
         Your browser does not support the video tag.
     </video>
