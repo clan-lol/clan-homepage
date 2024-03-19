@@ -28,6 +28,9 @@
 
 {{ macros_head::favicons() }}
 {% block math %}{{ macros_math::math() }}{% endblock math %}
+
+<link rel="stylesheet" type="text/css" href="{{ get_url(path='asciinema-player/asciinema-player.css') }}" />
+<link rel="stylesheet" type="text/css" href="{{ get_url(path='asciinema-player/custom-theme.css') }}" />
 </head>
 {% block body %}{% set page_class="home" %}{% endblock body %}
 <body class="{{ page_class }}">
