@@ -1,11 +1,8 @@
 # Script for installing NixOS VM.
 
 ```
-$ cd clan-core
-$ nix build .#install-iso
-$ realpath ./result/stick.raw
-/nix/store/5ylc9k28sp7xv89qnd47a473xbrf3gb5-nixos-disko-images/stick.raw
 $ USE_TMPDIR=1 TMPDIR=$(pwd) nix run .#nixosConfigurations.installer.config.system.build.nixos-shell
 $ clan machines install machine-to-install root@localhost:2222
+vm> poweroff
 $ qemu-kvm -enable-kvm -hda ./empty0.qcow2 -m 512 -nographic
 ```
