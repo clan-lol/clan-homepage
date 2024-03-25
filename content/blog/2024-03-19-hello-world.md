@@ -44,7 +44,7 @@ Clan embodies a new philosophy in system, application, and network design. It en
 {{ video(name="show_run.webm")}}
 
 - **Robust Backup Management:** Keep your data safe _forever_ - never worry about cloud services disappearing in 10 years.
-
+   {{ asciinema(name="backups.cast") }}
 
 - **Intuitive Secret Management:** Clan simplifies digital security by automating the creation and management of encryption keys and passwords for your services.
    {{ asciinema(name="secrets.cast") }}

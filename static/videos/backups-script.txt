@@ -1,0 +1,6 @@
+# Script for installing NixOS VM.
+
+```
+$ clan backups create turingmachine
+$ clan backups list turingmachine
+```
