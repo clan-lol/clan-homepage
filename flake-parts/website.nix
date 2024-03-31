@@ -7,6 +7,7 @@
     lib,
     pkgs,
     self',
+    inputs',
     ...
   }: let
     build = baseUrl: pkgs.runCommand "website" {
@@ -30,7 +31,7 @@
         echo "generating page from clan-core: $title"
 
         # generate header with title, template, weight to make zola happy
-        echo -e "+++\ntitle = \"$title\"\ntemplate = \"docs/page.html\"\nweight = 0+++" > "$targetFile"
+        echo -e "+++\ntitle = \"$title\"\ntemplate = \"docs/page.html\"\nweight = 0\n+++" > "$targetFile"
 
         # append everything from the file but remove header line starting with '#' and all preceding non-empty lines
         tail -n +2 "$sourceFile" >> "$targetFile"
@@ -52,6 +53,12 @@
         done
       done
 
+      # inject nixos options docs for clanCore
+      cp -r ${inputs'.clan-core.packages.docs-zola-pages-core} content/docs/core-options
+
+      # inject nixos options docs for clanModules
+      cp -r ${inputs'.clan-core.packages.docs-zola-pages-modules} content/docs/modules-options
+
       zola build
       cp -r public/* public/.* $out
     '';
@@ -59,7 +66,8 @@
     packages.default = self'.packages.website;
     packages.website = build "https://clan.lol";
     packages.website-localhost = build "http://localhost:1111";
-    packages.serve = pkgs.writeScriptBin "serve-local" ''
+    packages.serve = pkgs.writeShellScriptBin "serve-local" ''
+      echo "serving: ${self'.packages.website-localhost}"
       ${pkgs.python3}/bin/python -m http.server 1111 \
         -d ${self'.packages.website-localhost}
     '';
