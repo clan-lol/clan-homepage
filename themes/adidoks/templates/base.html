@@ -29,6 +29,11 @@
 {{ macros_head::favicons() }}
 {% block math %}{{ macros_math::math() }}{% endblock math %}
 
+
+{% block rss %}
+  <link rel="alternate" type="application/atom+xml" title="RSS" href="{{ get_url(path="atom.xml", trailing_slash=false) }}">
+{% endblock %}
+
 <link rel="stylesheet" type="text/css" href="{{ get_url(path='asciinema-player/asciinema-player.css') }}" />
 <link rel="stylesheet" type="text/css" href="{{ get_url(path='asciinema-player/custom-theme.css') }}" />
 </head>

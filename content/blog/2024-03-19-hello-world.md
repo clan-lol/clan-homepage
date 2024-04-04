@@ -65,4 +65,8 @@ Connect with us on our [Matrix channel at clan.lol](https://matrix.to/#/!djzOHBB
 
 Want to see the code? Check it out [on our Gitea](https://git.clan.lol/clan/clan-core) or [on GitHub](https://github.com/clan-lol/clan-core).
 
+Or follow our RSS feed by clicking in the top right corner!
+
 Join us and be part of changing technology for the better, together.
+
+
