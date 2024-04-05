@@ -14,15 +14,15 @@ toc = true
 top = false
 +++
 
-## Contribute
+## Contribute to the code
 
-👉 Explore our repos at [git.clan.lol](https://git.clan.lol/explore/repos)
+👉 Explore our repos at [git.clan.lol/clan](https://git.clan.lol/clan)
 
-👉 [Browse issues](https://git.clan.lol/issues)
+👉 [Browse issues](https://git.clan.lol/clan/clan-core/issues)
 
-👉 [Create new issue](https://git.clan.lol/clan/clan-core/issues/new)
+👉 [Create a new issue](https://git.clan.lol/clan/clan-core/issues/new)
 
 
-## Improve these docs
+## Improve documentation
 
-👉 The documentation lives in [git.clan.lol/clan/clan-homepage](https://git.clan.lol/clan/clan-homepage/src/branch/main/content/docs)
+👉 The source code for this site lives in [git.clan.lol/clan/clan-homepage](https://git.clan.lol/clan/clan-homepage/src/branch/main/content/docs)
