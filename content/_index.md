@@ -23,8 +23,6 @@ section = "blog"
 url = "/blog/"
 weight = 20
 
-
-
 [[extra.list]]
 title = "Easy to use"
 content = 'cLAN provides a user-friendly interface that allows you to establish your own private network, complete with services.'
