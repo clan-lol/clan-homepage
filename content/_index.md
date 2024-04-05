@@ -3,7 +3,7 @@ title = "Build your own"
 
 # The homepage contents
 [extra]
-lead = '<img src="/logo/clan-dark.png" class="clogo" width="100px" height="100px" alt="cLAN logo"></img> <br><b>cLAN</b> envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly. '
+lead = '<img src="/logo/clan-dark.png" class="clogo" width="100px" height="100px" alt="cLAN logo"></img> <br><b>cLAN</b> envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a private, secure, and user-friendly computing platform. '
 url = "/docs/thevision/"
 url_button = "Learn more"
 repo_version = "cLAN v0.0.0-alpha"
