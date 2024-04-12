@@ -11,7 +11,7 @@ template = "docs/page.html"
 [extra]
 lead = "Contribute to cLAN, improve documentation, or submit to showcase."
 toc = true
-top = false
+section = "docs"
 +++
 
 ## Contribute to the code

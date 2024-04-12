@@ -8,6 +8,9 @@ weight = 30
 sort_by = "weight"
 paginator.next = "docs/overview/index.md"
 template = "docs/page.html"
+
+[extra]
+section = "docs"
 +++
 
 

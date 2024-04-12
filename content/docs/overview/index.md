@@ -11,7 +11,7 @@ template = "docs/page.html"
 [extra]
 lead = "Overview of cLAN's architecture, components and security"
 toc = true
-top = false
+section = "docs"
 +++
 
 

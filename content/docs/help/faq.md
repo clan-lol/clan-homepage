@@ -11,7 +11,7 @@ template = "docs/page.html"
 [extra]
 lead = "Answers to frequently asked questions."
 toc = true
-top = false
+section = "docs"
 +++
 
 ## Keyboard shortcuts for search?
