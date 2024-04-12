@@ -3,7 +3,7 @@
 {% block seo %}
   {% set author_name_in_url = term.permalink | trim_end_matches(pat="/") | split(pat="/") | last %}
   {% set section = get_section(path="authors/_index.md") %}
-  
+
   {% if section.extra.author_pages[author_name_in_url] %}
     {% set_global author_page = get_page(path=section.extra.author_pages[author_name_in_url])%}
   {% endif %}
@@ -12,26 +12,26 @@
   {% else %}
     {% set_global title = term.name %}
   {% endif %}
-  
+
   {% set title_addition = "" %}
     {% if config.extra.title_separator %}
       {% set title_separator = " " ~ config.extra.title_separator ~ " " %}
     {% else %}
       {% set title_separator = " | " %}
     {% endif %}
-  
+
   {% if config.title %}
     {% set title_addition = title_separator ~ config.title %}
   {% else %}
     {% set title_addition = "" %}
   {% endif %}
-  
+
   {% if author_page and author_page.description %}
     {% set description = author_page.description %}
   {% else %}
     {% set description = config.description %}
   {% endif %}
-  
+
   {{ macros_head::seo(title=title, title_addition=title_addition, description=description) }}
 {% endblock seo %}
 
