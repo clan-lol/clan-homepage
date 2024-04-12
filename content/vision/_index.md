@@ -7,10 +7,10 @@ draft = false
 weight = 30
 sort_by = "weight"
 paginator.next = "docs/overview/index.md"
-template = "docs/page.html"
+template = "section.html"
 
 [extra]
-section = "docs"
+section = "vision"
 +++
 
 
