@@ -23,7 +23,7 @@
       rsync \
         -e "ssh -o StrictHostKeyChecking=no $sshExtraArgs" \
         -a ${self'.packages.default}/ \
-        www@clan.lol:/var/www
+        www@clan.lol:/var/www/clan.lol
 
       if [ -e ./ssh_key ]; then
         rm ./ssh_key
