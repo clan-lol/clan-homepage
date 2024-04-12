@@ -103,20 +103,6 @@ url = "https://git.clan.lol/clan/clan-core"
 post = "v0.1.0"
 weight = 20
 
-
-# Menu items
-[[extra.menu.main]]
-name = "Docs"
-section = "docs"
-url = "/docs/getting-started/introduction/"
-weight = 10
-
-[[extra.menu.main]]
-name = "Blog"
-section = "blog"
-url = "/blog/"
-weight = 20
-
 # Footer contents
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a>'

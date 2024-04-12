@@ -51,12 +51,6 @@
 							<a class="nav-link" href="{{ get_url(path=val.url, trailing_slash=true) | safe }}">{{ val.name }}</a>
 						</li>
 					{% endfor %}
-				{% elif config.extra.menu.main %}
-					{% for val in config.extra.menu.main %}
-						<li class="nav-item{% if current_section == val.section %} {{ current_section }} active{% endif %}">
-							<a class="nav-link" href="{{ get_url(path=val.url, trailing_slash=true) | safe }}">{{ val.name }}</a>
-						</li>
-					{% endfor %}
 				{% else %}
 				<li class="nav-item">
 					<a class="nav-link" href="{{ get_url(path="docs", trailing_slash=true) | safe }}">Docs</a>
