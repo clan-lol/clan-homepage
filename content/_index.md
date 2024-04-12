@@ -18,6 +18,12 @@ url = "/vision"
 weight = 10
 
 [[extra.menu.main]]
+name = "Architecture"
+section = "srchitecture"
+url = "/architecture"
+weight = 10
+
+[[extra.menu.main]]
 name = "Docs"
 section = "docs"
 url = "/docs/thevision"

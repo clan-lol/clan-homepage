@@ -6,7 +6,6 @@ updated = 2021-05-01T19:30:00+00:00
 draft = false
 weight = 30
 sort_by = "weight"
-paginator.next = "docs/overview/index.md"
 template = "section.html"
 
 [extra]
@@ -41,5 +40,3 @@ The core idea is to ensure service decentralization without a single point of fa
 ### Administrative Control
 
 Within a cLAN, administrators define the configuration file and have control over who becomes part of the network.
-
-Go to [Technical Overview](@/docs/overview/index.md) to see more indepth details of our work.
