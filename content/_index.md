@@ -24,22 +24,22 @@ url = "/architecture"
 weight = 10
 
 [[extra.menu.main]]
-name = "Docs"
+name = "Documentation"
 section = "docs"
-url = "/docs/thevision"
+url = "/docs"
 weight = 10
-
-[[extra.menu.main]]
-name = "Blog"
-section = "blog"
-url = "/blog/"
-weight = 20
 
 [[extra.menu.main]]
 name = "Contributing"
 section = "contributing"
 url = "/contributing"
 weight = 10
+
+[[extra.menu.main]]
+name = "Blog"
+section = "blog"
+url = "/blog"
+weight = 20
 
 [[extra.list]]
 title = "Easy to use"
