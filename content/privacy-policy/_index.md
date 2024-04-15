@@ -9,7 +9,7 @@ draft = false
 class = "page single"
 +++
 
-__TLDR__: We do not use cookies and we do not collect any personal data.
+__TL;DR__: We do not use cookies and we do not collect any personal data.
 
 ## Website visitors
 
@@ -22,6 +22,4 @@ __TLDR__: We do not use cookies and we do not collect any personal data.
 
 ## Contact us
 
-[Contact us](mailto:admin@clan.lol) if you have any questions.
-
-Effective Date: _4th July 2023_
+[Contact us on Matrix](https://matrix.to/#/#clan:lassul.us) if you have any questions.

@@ -1,17 +1,17 @@
 +++
-title = "Technical Overview"
+title = "Architecture"
 description = "Overview of cLAN's architecture, components and security"
 date = 2021-05-01T18:10:00+00:00
 updated = 2021-07-13T18:10:00+00:00
 draft = false
 weight = 410
 sort_by = "weight"
-template = "docs/page.html"
+template = "section.html"
 
 [extra]
 lead = "Overview of cLAN's architecture, components and security"
 toc = true
-top = false
+section = "architecture"
 +++
 
 

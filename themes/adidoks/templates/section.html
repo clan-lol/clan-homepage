@@ -5,7 +5,7 @@
 {% block seo %}
   {{ super() }}
   {% set title_addition = "" %}
-  
+
   {% if section.title and config.title %}
     {% set title = section.title %}
     {% set title_addition = title_separator ~ config.title %}
@@ -14,13 +14,13 @@
   {% else %}
     {% set title = config.title %}
   {% endif %}
-  
+
   {% if section.description %}
     {% set description = section.description %}
   {% else %}
     {% set description = config.description %}
   {% endif %}
-  
+
   {{ macros_head::seo(title=title, title_addition=title_addition, description=description) }}
 {% endblock seo %}
 

@@ -1,17 +1,17 @@
 {% extends "base.html" %}
 
 {% block seo %}
-  {{ super() }} 
+  {{ super() }}
   {% set title = "404 Page not found" %}
-  
+
   {% if config.title %}
     {% set title_addition = title_separator ~ config.title %}
   {% else %}
     {% set title_addition = "" %}
   {% endif %}
-  
+
   {% set description = config.description %}
-  
+
   {{ macros_head::seo(title=title, title_addition=title_addition, description=description, is_404=true) }}
 {% endblock seo %}
 

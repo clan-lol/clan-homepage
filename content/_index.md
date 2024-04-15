@@ -12,15 +12,33 @@ repo_url = "https://git.clan.lol/clan/"
 
 # Menu items
 [[extra.menu.main]]
-name = "Docs"
+name = "Vision"
+section = "vision"
+url = "/vision"
+weight = 10
+
+[[extra.menu.main]]
+name = "Architecture"
+section = "srchitecture"
+url = "/architecture"
+weight = 10
+
+[[extra.menu.main]]
+name = "Documentation"
 section = "docs"
-url = "/docs/thevision"
+url = "/docs"
+weight = 10
+
+[[extra.menu.main]]
+name = "Contributing"
+section = "contributing"
+url = "/contributing"
 weight = 10
 
 [[extra.menu.main]]
 name = "Blog"
 section = "blog"
-url = "/blog/"
+url = "/blog"
 weight = 20
 
 [[extra.list]]

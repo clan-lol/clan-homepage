@@ -26,7 +26,7 @@ taxonomies = [
 # Whether to build a search index to be used later on by a JavaScript library
 # When set to "true", a search index is built from the pages and section
 # content for `default_language`.
-build_search_index = true
+build_search_index = false
 
 [search]
 # Whether to include the title of the page/section in the index
@@ -103,30 +103,11 @@ url = "https://git.clan.lol/clan/clan-core"
 post = "v0.1.0"
 weight = 20
 
-
-# Menu items
-[[extra.menu.main]]
-name = "Docs"
-section = "docs"
-url = "/docs/getting-started/introduction/"
-weight = 10
-
-[[extra.menu.main]]
-name = "Blog"
-section = "blog"
-url = "/blog/"
-weight = 20
-
 # Footer contents
 [extra.footer]
 info = 'Powered by <a href="https://www.getzola.org/">Zola</a>, and <a href="https://github.com/aaranxu/adidoks">AdiDoks</a>'
 
 [[extra.footer.nav]]
-name = "Privacy"
+name = "Privacy Policy"
 url = "/privacy-policy/"
 weight = 10
-
-[[extra.footer.nav]]
-name = "The Vision"
-url = "/docs/thevision"
-weight = 20
