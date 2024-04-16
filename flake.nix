@@ -4,13 +4,9 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
-
-    clan-core.url = "git+https://git.clan.lol/clan/clan-core";
-    clan-core.inputs.flake-parts.follows = "flake-parts";
-    clan-core.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, flake-parts, clan-core, ... }:
+  outputs = inputs@{ self, flake-parts, ... }:
     flake-parts.lib.mkFlake { inherit inputs; } ({ lib, ... }: {
       systems = [ "x86_64-linux" ];
       imports = [

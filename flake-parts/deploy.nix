@@ -5,7 +5,7 @@
     self',
     ...
   }: let
-    deployScript = pkgs.writeScript "deploy.sh" ''
+    deployScript = pkgs.writeShellScript "deploy.sh" ''
       export PATH="${lib.makeBinPath [
         pkgs.coreutils
         pkgs.openssh

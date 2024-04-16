@@ -11,9 +11,6 @@
           pkgs.bashInteractive
           pkgs.zola
         ];
-        inputsFrom = [
-          inputs'.clan-core.devShells.default
-        ];
       };
     };
 }
