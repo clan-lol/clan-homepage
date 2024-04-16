@@ -37,28 +37,6 @@
         tail -n +2 "$sourceFile" >> "$targetFile"
       }
 
-      # inject pages from clan-core
-      for dir in ${inputs.clan-core}/docs/*; do
-        subdir=$(basename $dir)
-        targetDir="content/docs/$subdir"
-        mkdir -p "$targetDir"
-        for file in ${inputs.clan-core}/docs/$subdir/*.md; do
-          target="content/docs/$subdir/$(basename $file)"
-          # only generate page if file doesn't start with _
-          if [[ $(basename $file) == _* ]]; then
-            cat "$file" > "$target"
-            continue
-          fi
-          generatePage "$file" "$target"
-        done
-      done
-
-      # inject nixos options docs for clanCore
-      cp -r ${inputs'.clan-core.packages.docs-zola-pages-core} content/docs/core-options
-
-      # inject nixos options docs for clanModules
-      cp -r ${inputs'.clan-core.packages.docs-zola-pages-modules} content/docs/modules-options
-
       zola build
       cp -r public/* public/.* $out
     '';
