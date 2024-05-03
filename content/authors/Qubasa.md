@@ -1,6 +1,6 @@
 +++
 title = "Qubasa"
-description = "Contributor to cLAN."
+description = "Contributor to Clan."
 +++
 
 Contributor to **clan**.

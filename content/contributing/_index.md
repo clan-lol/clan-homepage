@@ -1,6 +1,6 @@
 +++
 title = "Contributing"
-description = "Contribute to cLAN, improve documentation, or submit to showcase."
+description = "Contribute to Clan, improve documentation, or submit to showcase."
 date = 2025-05-01T18:00:00+00:00
 updated = 2021-05-01T18:00:00+00:00
 template = "section.html"
@@ -18,4 +18,4 @@ section = "contributing"
 
 👉 Source code for this site: [git.clan.lol/clan/clan-homepage](https://git.clan.lol/clan/clan-homepage/src/branch/main/content/docs)
 
-👉 Join [cLAN on Matrix](https://matrix.to/#/#clan:lassul.us) to contact maintainers
+👉 Join [Clan on Matrix](https://matrix.to/#/#clan:lassul.us) to contact maintainers

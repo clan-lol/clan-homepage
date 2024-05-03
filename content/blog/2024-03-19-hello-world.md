@@ -1,6 +1,6 @@
 +++
 title = "Introducing Clan: Full-Stack Computing Redefined"
-description = "Introducing cLAN, a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly."
+description = "Introducing Clan, a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a platform that’s private, secure, and user-friendly."
 date = 2024-03-19T09:19:42+00:00
 updated = 2024-03-19T09:19:42+00:00
 draft = false
@@ -44,13 +44,16 @@ Clan embodies a new philosophy in system, application, and network design. It en
 {{ video(name="show_run.webm")}}
 
 - **Robust Backup Management:** Keep your data safe _forever_ - never worry about cloud services disappearing in 10 years.
-   {{ asciinema(name="backups.cast") }}
+
+{{ asciinema(name="backups.cast") }}
 
 - **Intuitive Secret Management:** Clan simplifies digital security by automating the creation and management of encryption keys and passwords for your services.
-   {{ asciinema(name="secrets.cast") }}
+
+{{ asciinema(name="secrets.cast") }}
 
 - **Remote Install:** Set up and manage Clan systems anywhere in the world with just a QR scan or SSH access, making remote installations as easy as snapping a photo or sharing a link.
-   {{ asciinema(name="nixos-install.cast") }}
+
+{{ asciinema(name="nixos-install.cast") }}
 
 
 ## Who Stands to Benefit?
