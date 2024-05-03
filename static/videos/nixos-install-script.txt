@@ -4,5 +4,10 @@
 $ USE_TMPDIR=1 TMPDIR=$(pwd) nix run .#nixosConfigurations.installer.config.system.build.nixos-shell
 $ clan machines install machine-to-install root@localhost:2222
 vm> poweroff
-$ qemu-kvm -enable-kvm -hda ./empty0.qcow2 -m 512 -nographic
+qemu-kvm \
+   -enable-kvm -m 2048 \
+   -nographic \
+   -usb -device u2f-passthru
+   -drive file=disk.img,if=none,id=nvm \
+   -device nvme,serial=deadbeef,drive=nvm
 ```

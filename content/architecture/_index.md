@@ -1,6 +1,6 @@
 +++
 title = "Architecture"
-description = "Overview of cLAN's architecture, components and security"
+description = "Overview of Clan's architecture, components and security"
 date = 2021-05-01T18:10:00+00:00
 updated = 2021-07-13T18:10:00+00:00
 draft = false
@@ -9,15 +9,15 @@ sort_by = "weight"
 template = "section.html"
 
 [extra]
-lead = "Overview of cLAN's architecture, components and security"
+lead = "Overview of Clan's architecture, components and security"
 toc = true
 section = "architecture"
 +++
 
 
-### cLAN
+### Clan
 
-cLAN envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a private, secure, and user-friendly computing platform. The system transcends the conventional reliance on centralized services, allowing for direct, end-to-end encrypted communication among users. Rooted in open-source software, cLAN ensures no vendor lock-in, and introduces robust features including:
+Clan envisions a new model for a decentralized network, designed to provide families, smaller groups, and small businesses a private, secure, and user-friendly computing platform. The system transcends the conventional reliance on centralized services, allowing for direct, end-to-end encrypted communication among users. Rooted in open-source software, Clan ensures no vendor lock-in, and introduces robust features including:
 
 - Remote management
 - Backup functionality
@@ -26,7 +26,7 @@ cLAN envisions a new model for a decentralized network, designed to provide fami
 
 ### Decentralized Network Model
 
-cLAN incorporates a decentralized network model to tackle the challenges posed by restrictive firewalls, NAT, and the scarcity of the IPv4 address space. By leveraging end-to-end encryption, the model ensures that all peers within the network are fully connected, allowing direct communication.
+Clan incorporates a decentralized network model to tackle the challenges posed by restrictive firewalls, NAT, and the scarcity of the IPv4 address space. By leveraging end-to-end encryption, the model ensures that all peers within the network are fully connected, allowing direct communication.
 
 This is achieved by setting up decentralized virtual private network (VPN). A decentralized VPN is a system that uses multiple servers spread across different locations to create a secure, private network within an organization, enabling secure communication and data transfer without relying on a central server. The VPN serves as an added layer of security, shielding internal services from exposure to the open internet.
 
@@ -51,7 +51,7 @@ We will not add this to the initial prototype...
 
 ### NixOS as the Operating System
 
-Maintaining and configuring a decentralized system like cLAN with heterogeneous services on heterogeneous platforms is a challenging task. In professional setups this is usually solved with configuration management systems. These systems require years of experience and are therefore not approchable by non-expert users. The solution to this problem so far is to instead provide end-users with appliances that are massivly locked-down in terms of the functionality or platforms they support. To overcome these limitations, we cLAN is based on NixOS.
+Maintaining and configuring a decentralized system like Clan with heterogeneous services on heterogeneous platforms is a challenging task. In professional setups this is usually solved with configuration management systems. These systems require years of experience and are therefore not approchable by non-expert users. The solution to this problem so far is to instead provide end-users with appliances that are massivly locked-down in terms of the functionality or platforms they support. To overcome these limitations, we Clan is based on NixOS.
 
 NixOS is an operating system that uses a single declarative and consistent configuration to describe the whole system, using a purpose-built programming language called the Nix language. While the Nix language itself is not necessarily more accessible to non-experts, we believe it's still the best fit for the task. The underlying data structures used by NixOS are simple enough to be managed from a graphical user interface.
 
@@ -68,9 +68,9 @@ From the perspective of the user, software and systems that once required years 
 
 ### Self-hosted backup and restore
 
-cLAN enables users to easily self-host and backup their data, since one of the perils of self-hosting is data loss. Users can build pre-configured servers from the same interface where they also would be notified about devices not being backed up. They can also view information about the storage device, such as available storage and state of arrays.
+Clan enables users to easily self-host and backup their data, since one of the perils of self-hosting is data loss. Users can build pre-configured servers from the same interface where they also would be notified about devices not being backed up. They can also view information about the storage device, such as available storage and state of arrays.
 
-It is possible for users to back up devices in their global network, regardless of how they are connected. Services installed provided by cLAN also need to be aware of the backup process i.e. some applications, such as databases, have custom backup and restore procedures that needs to be integrated in the backup procedure.
+It is possible for users to back up devices in their global network, regardless of how they are connected. Services installed provided by Clan also need to be aware of the backup process i.e. some applications, such as databases, have custom backup and restore procedures that needs to be integrated in the backup procedure.
 
 ## Components
 
@@ -82,7 +82,7 @@ It is possible for users to back up devices in their global network, regardless 
 
 ### Base Operating System
 
-Initially, we will utilize NixOS as the foundational operating system for hosting network-specific virtual machines. Presently, the installation process of NixOS involves advanced technical expertise, including a degree of proficiency in its unique programming language. However, our solution cLAN aims to simplify this process, enabling even non-technical users to successfully install the system.
+Initially, we will utilize NixOS as the foundational operating system for hosting network-specific virtual machines. Presently, the installation process of NixOS involves advanced technical expertise, including a degree of proficiency in its unique programming language. However, our solution Clan aims to simplify this process, enabling even non-technical users to successfully install the system.
 
 Several approaches can be considered to simplify the Base OS installation process:
 
@@ -112,16 +112,16 @@ An example flake.nix for a virtual machine network:
 
 ```nix
 {
-  inputs.cLAN.url = "git+https://git.cLAN.com/cLAN";
+  inputs.Clan.url = "git+https://git.Clan.com/Clan";
 
-  outputs = { self, cLAN, ... }:
+  outputs = { self, Clan, ... }:
     {
       nixosModules = {
-        default = inputs.cLAN.nixosSystem {
+        default = inputs.Clan.nixosSystem {
           imports = [
-            cLAN.nixosModules.default
+            Clan.nixosModules.default
           ];
-          cLAN = {
+          Clan = {
             adminMode = "local";
             networkLayer= "yggdrasil";
             applications = {
@@ -129,7 +129,7 @@ An example flake.nix for a virtual machine network:
                 enable = true;
                 sharedFolders = [ "/shared/docs" ];
               };
-              mumbleClient.server = "mumble.cLAN";
+              mumbleClient.server = "mumble.Clan";
             };
           };
         };
@@ -160,11 +160,11 @@ The above `flake.nix` can also be split into a boilerplate `flake.nix` and a JSO
 
 ```nix
 {
-  inputs.cLAN.url = "git+https://git.cLAN.com/cLAN";
+  inputs.Clan.url = "git+https://git.Clan.com/Clan";
   
-  outputs = { self, cLAN, ... }:
+  outputs = { self, Clan, ... }:
     {
-      nixosModules = cLAN.lib.generateNixosModules (builtins.fromJSON (import ./configs.json));
+      nixosModules = Clan.lib.generateNixosModules (builtins.fromJSON (import ./configs.json));
     };
 }
 ```
@@ -181,7 +181,7 @@ The above `flake.nix` can also be split into a boilerplate `flake.nix` and a JSO
         "sharedFolders": [ "/shared/docs" ]
       },
       "mumbleClient": {
-        "server": "mumble.cLAN"
+        "server": "mumble.Clan"
       }
     }
   }
