@@ -8,8 +8,7 @@
     }: {
       devShells.default = pkgs.mkShell {
         packages = [
-          pkgs.bashInteractive
-          pkgs.zola
+          
         ];
       };
     };
