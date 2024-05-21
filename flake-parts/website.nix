@@ -21,6 +21,7 @@
             'base_url = "${baseUrl}"' \
 
           cp -r website/* website/.* $out
+          cp -r static/* static/.* $out
         '';
     in
     {
