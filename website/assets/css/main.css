@@ -2906,7 +2906,7 @@ input[type="button"].small,
 
 .feature.right .image img {
 	left: 0;
-	top: 0;
+	bottom: 0;
 }
 
 .feature.right .content {
