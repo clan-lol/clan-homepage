@@ -16,12 +16,9 @@
           cp -r ${self}/* .
           chmod -R u+w .
 
-          substituteInPlace config.toml --replace \
-            'base_url = "https://clan.lol"' \
-            'base_url = "${baseUrl}"' \
-
           cp -r website/* website/.* $out
-          cp -r static/* static/.* $out
+          rm $out/static
+          cp -r static/ $out/static
         '';
     in
     {
