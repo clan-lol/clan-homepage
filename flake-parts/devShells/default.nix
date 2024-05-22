@@ -8,9 +8,10 @@
     }: {
       devShells.default = pkgs.mkShell {
         packages = [
-          pkgs.bashInteractive
-          pkgs.zola
         ];
+        shellHook = ''
+          ln -snf "$PWD"/static "$PWD"/website/static
+        '';
       };
     };
 }
