@@ -7,7 +7,7 @@ span[data-value="Darknet"] {
 
 .top-header {
 	background-color: #2C2C2C;
-	padding: 20px 0;
+	padding: 1em 0;
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -18,15 +18,23 @@ span[data-value="Darknet"] {
 .header-nav-links a {
 	color: #FFFFFF;
 	text-decoration: none;
-	margin: 0 15px;
-	font-size: 16px;
+	margin: 0 1em;
+	font-size: 1.5em;
 }
 
 .header-nav-links a:hover {
 	text-decoration: underline;
 }
 
+@media screen and (max-width: 736px) {
 
+}
+
+@media screen and (max-width: 480px) {
+	.header-nav-links a {
+		font-size: 1em;
+	}
+}
 
 /*
 	Directive by HTML5 UP
