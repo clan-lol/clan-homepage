@@ -1,9 +1,6 @@
 @import url(extneral.css);
 
 
-span[data-value="Darknet"] {
-	color: #0f0;
-}
 
 .top-header {
 	background-color: #2C2C2C;
