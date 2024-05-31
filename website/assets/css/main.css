@@ -1,6 +1,15 @@
 @import url(extneral.css);
 
+.hacker-effect {
+	color: #0f0;
+}
 
+@media screen and (max-width: 480px) {
+	.hacker-effect {
+		color: #0f0;
+		display:block;
+	}
+}
 
 .top-header {
 	background-color: #2C2C2C;
