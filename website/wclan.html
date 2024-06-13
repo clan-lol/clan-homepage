@@ -30,6 +30,7 @@
         .content-section details[open] {
             padding-bottom: 1em;
         }
+
     </style>
 </head>
 
@@ -54,7 +55,7 @@
 
         <div class="box alt container content-section">
             <details>
-                <summary><b>Unified Git Repository</b>: Store all your machine configs and secrets in a single repository</summary>
+                <summary><b>Unified Git Repository</b>: Centralize secrets & configurations in a single repository</summary>
                 <p>Clan uses a single Git repository to define everything about your machines. This central repository utilizes Nix or JSON files to specify configurations, including disk formatting. This streamlined and unified approach gives you the power to manage your servers from a central point without relying on a centralized provider, scaling your IT infrastructure on your own terms.</p>
             </details>
 
@@ -64,8 +65,13 @@
             </details>
 
             <details>
-                <summary><b>Automated Service Setup</b>: Install services as if they are apps</summary>
-                <p>Setting up a service can be quite complex: many server adjustments need to be made, from setting up a database to adjusting webserver configurations and generating the correct private keys. Clan aims to make setting up a service as easy as installing an application. Through the <a href="https://docs.clan.lol/reference/clanModules/">Modules</a> system, everything down to secrets can be set up through a smooth automated process.</p>
+                <summary><b>Automated Service Setup</b>: Install services as if they were applications</summary>
+                <p>Setting up a service can be quite complex: many server adjustments need to be made, from setting up a database to adjusting webserver configurations and generating the correct private keys. Clan aims to make setting up a service as easy as installing an application. Through the <a href="https://docs.clan.lol/reference/clanModules/borgbackup-static/">Modules</a> system, everything down to secrets can be set up through a smooth automated process.</p>
+            </details>
+
+            <details>
+                <summary><b>Automated Backups</b>: Syncronize state and backup to other peers automatically </summary>
+                <p>Each clan service specifies a state directory where all service state data is stored. This setup allows for the automatic backup of every service to other peers, including Postgres databases. With the  <a href="https://docs.clan.lol/reference/clanModules/syncthing/">Syncthing</a> clan module you can have perfect replicas of your laptop.</p>
             </details>
 
             <details>
@@ -73,15 +79,16 @@
                 <p>All machines in your Clan are interconnected through a self-configuring peer-to-peer mesh VPN. This additional layer of protection ensures that sensitive services, which might have too much attack surface to be hosted on the public internet, can still be made available on your Clan's network.</p>
             </details>
 
-            <!-- <details>
-                <summary><b>Peer-to-peer DNS</b>: Robust, independent DNS using flooding and caching algorithms.</summary>
-                <p>Current DNS implementations are distributed but not truly decentralized. For Clan, we implemented our own truly peer-to-peer DNS module which uses simple flooding and caching algorithms to discover available domains inside your Clan's VPN. This approach ensures that your internal domain name system is robust, reliable, and independent of external control, enhancing the resilience and security of your infrastructure.</p>
-            </details> -->
-
             <details>
                 <summary><b>Live Overwrites</b>: Deploy configurations over existing Linux distributions via SSH.</summary>
                 <p>With Clan, you can skip the cumbersome task of bootstrapping specific installation images. Clan allows you to overwrite any existing Linux distribution live over SSH, eliminating time-consuming setup processes. Deploy updates or new configurations swiftly and efficiently, maximizing uptime and minimizing hassle.</p>
             </details>
+
+
+            <!-- <details>
+                <summary><b>Peer-to-peer DNS</b>: Robust, independent DNS using flooding and caching algorithms.</summary>
+                <p>Current DNS implementations are distributed but not truly decentralized. For Clan, we implemented our own truly peer-to-peer DNS module which uses simple flooding and caching algorithms to discover available domains inside your Clan's VPN. This approach ensures that your internal domain name system is robust, reliable, and independent of external control, enhancing the resilience and security of your infrastructure.</p>
+            </details> -->
 
         </div>
 
