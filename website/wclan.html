@@ -2,10 +2,19 @@
 <html>
 
 <head>
-    <title>What is Clan?</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
+    <title>What is Clan? A feature overview</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+	<link rel="icon" type="image/png" href="static/dark-favicon/128x128.png">
+
+	<meta property="og:title" content="What is Clan?" />
+    <meta property="og:description" content="What is Clan? A guide through its features" />
+    <meta property="og:image" content="https://clan.lol/static/dark-favicon/128x128.png" />
+    <meta property="og:url" content="https://docs.clan.lol" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clan" />
+    <meta property="og:locale" content="en_US" />
     <style>
         .content-section {
             display: flex;
@@ -31,6 +40,18 @@
             padding-bottom: 1em;
         }
 
+        .highlight {
+
+            color: #5b5b5b;
+            padding: 1em;
+            border-radius: 5px;
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 2em 0;
+            width: 100%;
+            box-sizing: border-box;
+        }
     </style>
 </head>
 
@@ -50,7 +71,7 @@
     <div id="main">
         <header class="major container medium">
             <h2>What is Clan?</h2>
-            <p>Clan is a setup tool that centralizes machine configurations for peer-to-peer selfhosted networks. </p>
+            <p class="highlight">Clan is a setup tool that centralizes machine configurations for peer-to-peer self-hosted networks.</p>
         </header>
 
         <div class="box alt container content-section">
@@ -60,7 +81,7 @@
             </details>
 
             <details>
-                <summary><b>Automated Secret Management</b>: Auto-generate and share secrets with your peers </summary>
+                <summary><b>Automated Secret Management</b>: Auto-generate and share secrets with your peers</summary>
                 <p>Passwords and other sensitive information are encrypted within the Git repository and automatically decrypted during deployment. This keeps your secrets safe while also simplifying their management. Clan supports sharing secrets between admins, fostering collaboration and maintaining reproducibility and convenience without sacrificing security.</p>
             </details>
 
@@ -70,8 +91,8 @@
             </details>
 
             <details>
-                <summary><b>Automated Backups</b>: Syncronize state and backup to other peers automatically </summary>
-                <p>Each clan service specifies a state directory where all service state data is stored. This setup allows for the automatic backup of every service to other peers, including Postgres databases. With the  <a href="https://docs.clan.lol/reference/clanModules/syncthing/">Syncthing</a> clan module you can have perfect replicas of your laptop.</p>
+                <summary><b>Automated Backups</b>: Syncronize state and backup to other peers automatically</summary>
+                <p>Each clan service specifies a state directory where all service state data is stored. This setup allows for the automatic backup of every service to other peers, including Postgres databases. With the <a href="https://docs.clan.lol/reference/clanModules/syncthing/">Syncthing</a> clan module you can have perfect replicas of your laptop.</p>
             </details>
 
             <details>
@@ -83,7 +104,6 @@
                 <summary><b>Live Overwrites</b>: Deploy configurations over existing Linux distributions via SSH.</summary>
                 <p>With Clan, you can skip the cumbersome task of bootstrapping specific installation images. Clan allows you to overwrite any existing Linux distribution live over SSH, eliminating time-consuming setup processes. Deploy updates or new configurations swiftly and efficiently, maximizing uptime and minimizing hassle.</p>
             </details>
-
 
             <!-- <details>
                 <summary><b>Peer-to-peer DNS</b>: Robust, independent DNS using flooding and caching algorithms.</summary>
