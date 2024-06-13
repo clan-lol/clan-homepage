@@ -1,0 +1,109 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>What is Clan?</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <style>
+        .content-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-section details {
+            margin: 1em 0;
+            width: 80%;
+            background: #fff;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .content-section summary {
+            cursor: pointer;
+            margin-bottom: 0.5em;
+        }
+
+        .content-section details[open] {
+            padding-bottom: 1em;
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+    <header class="top-header">
+        <div class="container">
+            <nav class="header-nav-links">
+                <a href="https://docs.clan.lol/blog/">Blog</a>
+                <a href="https://docs.clan.lol/">Getting Started</a>
+                <a href="https://matrix.to/#/#clan:lassul.us">Chat</a>
+                <a href="https://git.clan.lol/clan/clan-core">Code</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main">
+        <header class="major container medium">
+            <h2>What is Clan?</h2>
+            <p>Clan is a setup tool that centralizes machine configurations for peer-to-peer selfhosted networks. </p>
+        </header>
+
+        <div class="box alt container content-section">
+            <details>
+                <summary><b>Unified Git Repository</b>: Store all your machine configs and secrets in a single repository</summary>
+                <p>Clan uses a single Git repository to define everything about your machines. This central repository utilizes Nix or JSON files to specify configurations, including disk formatting. This streamlined and unified approach gives you the power to manage your servers from a central point without relying on a centralized provider, scaling your IT infrastructure on your own terms.</p>
+            </details>
+
+            <details>
+                <summary><b>Automated Secret Management</b>: Auto-generate and share secrets with your peers </summary>
+                <p>Passwords and other sensitive information are encrypted within the Git repository and automatically decrypted during deployment. This keeps your secrets safe while also simplifying their management. Clan supports sharing secrets between admins, fostering collaboration and maintaining reproducibility and convenience without sacrificing security.</p>
+            </details>
+
+            <details>
+                <summary><b>Automated Service Setup</b>: Install services as if they are apps</summary>
+                <p>Setting up a service can be quite complex: many server adjustments need to be made, from setting up a database to adjusting webserver configurations and generating the correct private keys. Clan aims to make setting up a service as easy as installing an application. Through the <a href="https://docs.clan.lol/reference/clanModules/">Modules</a> system, everything down to secrets can be set up through a smooth automated process.</p>
+            </details>
+
+            <details>
+                <summary><b>Peer-to-peer Mesh VPN</b>: Securely connect machines over a private network.</summary>
+                <p>All machines in your Clan are interconnected through a self-configuring peer-to-peer mesh VPN. This additional layer of protection ensures that sensitive services, which might have too much attack surface to be hosted on the public internet, can still be made available on your Clan's network.</p>
+            </details>
+
+            <!-- <details>
+                <summary><b>Peer-to-peer DNS</b>: Robust, independent DNS using flooding and caching algorithms.</summary>
+                <p>Current DNS implementations are distributed but not truly decentralized. For Clan, we implemented our own truly peer-to-peer DNS module which uses simple flooding and caching algorithms to discover available domains inside your Clan's VPN. This approach ensures that your internal domain name system is robust, reliable, and independent of external control, enhancing the resilience and security of your infrastructure.</p>
+            </details> -->
+
+            <details>
+                <summary><b>Live Overwrites</b>: Deploy configurations over existing Linux distributions via SSH.</summary>
+                <p>With Clan, you can skip the cumbersome task of bootstrapping specific installation images. Clan allows you to overwrite any existing Linux distribution live over SSH, eliminating time-consuming setup processes. Deploy updates or new configurations swiftly and efficiently, maximizing uptime and minimizing hassle.</p>
+            </details>
+
+        </div>
+
+        <footer class="major container medium">
+            <h3>Join Us</h3>
+            <p>Clan is more than a tool—it's a change to a smaller, more peaceful internet.</p>
+            <ul class="actions special">
+                <li><a href="https://docs.clan.lol" class="button">Get Started</a></li>
+            </ul>
+        </footer>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <div class="container medium">
+            <ul class="copyright">
+                <li>&copy; Clan. All rights reserved.</li>
+                <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>
