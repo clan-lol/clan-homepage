@@ -12,7 +12,6 @@
       imports = [
         ./flake-parts/deploy.nix
         ./flake-parts/devShells
-        ./flake-parts/new-post.nix
         ./flake-parts/website.nix
       ];
       perSystem = {pkgs, ...}: {

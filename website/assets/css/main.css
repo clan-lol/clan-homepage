@@ -13,25 +13,30 @@
 
 .top-header {
 	background-color: #2C2C2C;
-	padding: 1em 0;
 	width: 100%;
-	position: fixed;
 	top: 0;
-	left: 0;
-	z-index: 1000;
+  position: sticky;
+	z-index: 999;
+}
+
+.header-nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-nav-links a {
 	color: #FFFFFF;
 	text-decoration: none;
-	margin: 0 1em;
+  white-space: nowrap;
+  padding: 0.5em;
 	font-size: 1.2em;
 }
 
 .header-nav-links a:hover {
 	text-decoration: underline;
 }
-
 
 @media screen and (max-width: 480px) {
 	.header-nav-links a {
@@ -150,6 +155,9 @@ section {
 
 body {
 	line-height: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 ol,
@@ -210,11 +218,6 @@ html {
 	box-sizing: inherit;
 }
 
-html,
-body {
-	height: 100%;
-}
-
 body {
 	background: #ffffff;
 }
@@ -248,7 +251,6 @@ a {
 	-webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	-ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
 	transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
-	border-bottom: dotted 1px;
 	color: #4eb980;
 	text-decoration: none;
 }
@@ -375,22 +377,6 @@ blockquote {
 
 	.container {
 		width: 95% !important;
-	}
-
-}
-
-@media screen and (max-width: 736px) {
-
-	.container {
-		width: 90% !important;
-	}
-
-}
-
-@media screen and (max-width: 480px) {
-
-	.container {
-		width: 100% !important;
 	}
 
 }
@@ -1863,7 +1849,12 @@ blockquote {
 
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 580px) {
+
+  .header-nav-links a:first-child {
+    flex-basis: 100%;
+    text-align: center;
+  }
 
 	.row {
 		display: flex;
@@ -2326,6 +2317,21 @@ textarea {
 	border: 0;
 	display: inline-block;
 	position: relative;
+}
+
+.image p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2C2C2C;
+  width: 66%;
+  padding: 0.1em 0.5em 0.1em 0.5em;
 }
 
 .image:after {
@@ -2875,7 +2881,7 @@ input[type="button"].small,
 	background-repeat: repeat-x, repeat, no-repeat;
 	background-size: 3200px 460px, auto, cover;
 	color: rgba(255, 255, 255, 0.8);
-	padding: 10em 0 20em 0;
+	padding: 1em 0 10vw 0;
 	position: relative;
 	text-align: center;
 }
@@ -2953,7 +2959,7 @@ input[type="button"].small,
 }
 
 #header h1 {
-	font-size: 2.5em;
+	font-size: 2vw;
 	margin: 0;
 }
 
@@ -3128,6 +3134,9 @@ input[type="button"].small,
 		font-size: 14pt;
 	}
 
+	h3 {
+		font-size: 1.15em;
+	}
 	h2 {
 		font-size: 1.5em;
 	}
@@ -3141,27 +3150,19 @@ input[type="button"].small,
 	header.major p {
 		font-size: 1.25em;
 	}
-
-	/* Header */
-
-	#header {
-		padding: 8em 0 16em 0;
-	}
-
-	#header h1 {
-		font-size: 2.25em;
-	}
-
-	#header p {
-		font-size: 1.25em;
-		line-height: 1.65em;
-	}
-
 }
 
 /* Normal */
 
 @media screen and (max-width: 1280px) {
+
+  #header {
+    padding-bottom: 15vw;
+	}
+
+  #header h1 {
+		font-size: 4vw;
+  }
 
 	#clan-logo {
 		width: 14em;
@@ -3224,7 +3225,6 @@ input[type="button"].small,
 		background-attachment: scroll, scroll, scroll;
 		background-image: url("images/top-1600.svg"), url("images/overlay.png"), url("../../images/header.jpg");
 		background-size: 1600px 230px, auto, cover;
-		padding: 6em 0 12em 0;
 	}
 
 	#header:before {
@@ -3233,14 +3233,6 @@ input[type="button"].small,
 
 	#header:after {
 		height: 25px;
-	}
-
-	#header h1 {
-		font-size: 2em;
-	}
-
-	#header p {
-		font-size: 1.15em;
 	}
 
 	/* Footer */
@@ -3290,10 +3282,6 @@ input[type="button"].small,
 	#clan-logo {
 		width: 14em;
 		height: 14em;
-	}
-
-	#header h1 {
-		font-size: 2em;
 	}
 
 	/* Section/Article */
@@ -3399,7 +3387,6 @@ input[type="button"].small,
 	#header {
 		background-image: url("images/top-1280.svg"), url("images/overlay.png"), url("../../images/header.jpg");
 		background-size: 1280px 184px, auto, cover;
-		padding: 3em 0 7em 0;
 	}
 
 	#header:before {
@@ -3408,18 +3395,6 @@ input[type="button"].small,
 
 	#header:after {
 		height: 20px;
-	}
-
-	#header .logo {
-		font-size: 1.5em;
-	}
-
-	#header h1 {
-		font-size: 1.75em;
-	}
-
-	#header p {
-		font-size: 1em;
 	}
 
 	/* Footer */
@@ -3454,10 +3429,6 @@ input[type="button"].small,
 	#clan-logo {
 		width: 10em;
 		height: 10em;
-	}
-
-	#header h1 {
-		font-size: 1.5em;
 	}
 
 	/* Section/Article */
@@ -3521,12 +3492,6 @@ input[type="button"].small,
 	}
 
 	/* Header */
-
-	#header {
-		padding-left: 2em;
-		padding-right: 2em;
-		padding-top: 5em;
-	}
 
 	#header br {
 		display: none;

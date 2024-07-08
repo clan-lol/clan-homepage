@@ -28,7 +28,7 @@
       packages.serve = pkgs.writeShellScriptBin "serve-local" ''
         echo "serving: ${self'.packages.website-localhost}"
         ${pkgs.python3}/bin/python -m http.server 1111 \
-          -d ${self'.packages.website-localhost}
+          -d website
       '';
     };
 }
